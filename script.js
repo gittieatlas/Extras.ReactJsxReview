@@ -1,15 +1,13 @@
-// three args: element type, element attributes, children
-// this is the same as JSX of <h1 id="header">Hello World</h1>
-// under the hood, webpack is translating JSX into the below line
-const h1 = React.createElement('h1', { id: 'header' }, 'Hello World');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
+// creating a component with JSX
 const FirstComponent = () => {
   return (
     <div id="wrapper">
       <h1 id="header">Hello World</h1>
     </div>
   );
-  // return React.createElement('div', { id: 'wrapper' }, [h1]);
 };
 
 // element to render, the node to append it to
