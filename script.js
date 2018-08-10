@@ -3,7 +3,12 @@
 // under the hood, webpack is translating JSX into the below line
 const h1 = React.createElement('h1', { id: 'header' }, 'Hello World');
 
-const div = React.createElement('div', { id: 'wrapper' }, [h1]);
+const FirstComponent = () => {
+  return React.createElement('div', { id: 'wrapper' }, [h1]);
+};
 
 // element to render, the node to append it to
-ReactDOM.render(div, document.getElementById('app'));
+ReactDOM.render(
+  React.createContext(FirstComponent),
+  document.getElementById('app')
+);
